@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom dom-traversal</title>
+  </head>
+  <style>
+    .msgArea {
+      background-color: lightgreen;
+    }
+  </style>
+  <body>
+    <div id="msgDiv"></div>
+    <div class="msgArea">Hey</div>
+    <div class="msgArea">You</div>
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+    </ul>
+    <!-- <div>A</div>
+    <div>B</div>
+    <div>C</div> -->
+
+    <script>
+      const msgDiv = document.getElementById("msgDiv");
+      // console.log(msgDiv);
+      // console.log(typeof msgDiv);
+      const msgAreas = document.getElementsByClassName("msgArea");
+      //console.log(msgAreas);
+      //console.log(typeof msgAreas);
+
+      let numMessageAreas = msgAreas.length;
+      //console.log(numMessageAreas);
+
+      for (let i = 0; i < numMessageAreas; i++) {
+        msgAreas[i].style.border = "3px solid green";
+      }
+
+      // const allDivs = document.getElementsByTagName("Div");
+      //console.log(allDivs);
+
+      const myListItem = document.querySelectorAll("ul");
+      console.log(myListItem);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <a href="./image.html">Home</a>
+    <button id="google">Google</button>
+    <button id="w3School">w3School</button>
+    <button id="img">image</button>
+
+    <script>
+      let googleBtn = document.getElementById("google");
+      let w3SchoolBtn = document.getElementById("w3School");
+      let imgBtn = document.getElementById("img");
+
+      googleBtn.onclick = () => window.open("https://www.google.com/", "_self");
+      w3SchoolBtn.onclick = () => window.open("https://www.w3schools.com/");
+      imgBtn.onclick = () => window.open("http://127.0.0.1:5500/exersice/image.html");
+    </script>
+  </body>
+</html>
