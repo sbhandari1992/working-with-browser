@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working with css</title>
+    <style>
+        .special {
+            border: 4px ridge blue;
+            background-color: rgb(43, 226, 150);
+        }
+        .notSpecial {
+            border: 4px ridge rgb(0, 255, 183);
+            background-color: rgb(226, 43, 174);
+        }
+        h1 {
+            font-size: 32px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red; font-size: 30px">Hey Everyone</h1>
+    <section id="instructor">
+        <h2>kevin</h2>
+    </section>
+    <section id="student1" >
+        <h2>Sherry</h2>
+    </section>
+    <section id="student2">
+        <h2>Amenda</h2>
+    </section>
+
+
+    <script>
+        let instructor = document.getElementById('instructor');
+        instructor.style.border = "1px solid red";
+        instructor.style.color = "green"
+
+        let studentId = document.getElementById('student1');
+
+        studentId.className = "special";
+        //studentId.className = "notSpecial";
+        studentId.classList.add('notSpecial');
+        console.log(studentId);
+
+        console.log(document.getElementById('student1').style.cssText);
+
+
+
+    </script>
+</body>
+</html>

@@ -36,15 +36,21 @@
       let numMessageAreas = msgAreas.length;
       //console.log(numMessageAreas);
 
-      for (let i = 0; i < numMessageAreas; i++) {
-        msgAreas[i].style.border = "3px solid green";
-      }
+      //for (let i = 0; i < numMessageAreas; i++) {
+       // msgAreas[i].style.border = "3px solid green";
+      //}
 
-      // const allDivs = document.getElementsByTagName("Div");
-      //console.log(allDivs);
+      const allDivs = document.getElementsByTagName("Div");
+      console.log(allDivs);
 
-      const myListItem = document.querySelectorAll("ul");
-      console.log(myListItem);
+      Array.from(allDivs).forEach(function(element) {
+        element.style.border = "2px dotted blue";
+
+      });
+      //console.log(allDivsArray);
+
+      //const myListItem = document.querySelectorAll("ul");
+      //console.log(myListItem);
     </script>
   </body>
 </html>

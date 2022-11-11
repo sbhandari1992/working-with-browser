@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working with properties</title>
+</head>
+<body>
+    <h1>Food Items</h1>
+    <img src="./images/onion.png" alt="onion are delicious">
+    <button id="btn">click me</button>
+
+
+    <script>
+        const imageElement = document.querySelector('img');
+        //imageElement.hidden = true;
+        console.log(imageElement.alt);
+
+        const buttonElement = document.getElementById('btn');
+        console.log(buttonElement);
+        buttonElement.onclick = () => imageElement.hidden  ?  imageElement.hidden = false : imageElement.hidden = true;
+
+
+        //let imageSrc = imageElement.src;
+        //console.log(imageSrc);
+        //let imageAlt = imageElement.alt;
+        //console.log(imageSrc);
+
+        imageElement.src = "./images/apple.png";
+        imageElement.alt = "How do you like them apple?";
+        //console.log(imageSrc);
+        //console.log(imageAlt);
+        console.log(imageElement.alt);
+
+
+
+
+    </script>
+</body>
+</html>
