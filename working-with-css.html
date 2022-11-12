@@ -7,12 +7,12 @@
     <title>working with css</title>
     <style>
         .special {
-            border: 4px ridge blue;
-            background-color: rgb(43, 226, 150);
+            border: 4px ridge rgb(26, 255, 0);
+            background-color: rgb(226, 43, 217);
         }
         .notSpecial {
-            border: 4px ridge rgb(0, 255, 183);
-            background-color: rgb(226, 43, 174);
+            border: 4px ridge rgb(251, 255, 0);
+            background-color: rgb(43, 43, 226);
         }
         h1 {
             font-size: 32px;
@@ -37,15 +37,20 @@
         let instructor = document.getElementById('instructor');
         instructor.style.border = "1px solid red";
         instructor.style.color = "green"
+        //instructor.style.width = '100px'
 
         let studentId = document.getElementById('student1');
 
-        studentId.className = "special";
+        //-----apply css by class one way
+        //studentId.className = "special";
         //studentId.className = "notSpecial";
+
+        //----- apply css by class another way
+        //studentId.classList.add('special');
         studentId.classList.add('notSpecial');
         console.log(studentId);
 
-        console.log(document.getElementById('student1').style.cssText);
+        console.log(studentId.style.cssText);
 
 
 

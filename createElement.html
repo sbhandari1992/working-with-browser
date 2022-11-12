@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating Element</title>
+</head>
+<body>
+    <div id="locationDiv"> </div>
+    <script>
+        let img = document.createElement("img");
+        let myH1 = document.createElement('h1');
+        myH1.setAttribute('id', 'myEmail');
+        //console.log(myH1);
+        //console.log(img);
+        img.src = "./working-with-browser/images/apple.png";
+        img.alt = "red apple";
+        let locationDiv = document.getElementById('locationDiv');
+        console.log(locationDiv);
+    
+
+        //to create a textNode
+        let email = 'sambhandari@yahoo.com';
+        let userName  = `Your userName is created by email ${email}`;
+        let userNameNode = document.createTextNode(userName);
+
+        let email2 = 'raj@yahoo.com';
+        let userName2  = `Your userName is created by email ${email2}`;
+        let userNameNode2 = document.createTextNode(userName2);
+
+
+        locationDiv.appendChild(img);
+        locationDiv.appendChild(myH1);
+        myH1.appendChild(userNameNode);
+
+        
+       // myH1.removeChild(userNameNode);
+
+
+
+
+
+    </script>
+</body>
+</html>

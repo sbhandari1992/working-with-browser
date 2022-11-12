@@ -9,12 +9,37 @@
 <body>
     <div id="myDiv"></div>
     <script>
+        const myDiv = document.getElementById('myDiv');
+        console.log(myDiv);
+        const createh1 = document.createElement('h1');
+        const createh2 = document.createElement('h2');
+
+        createh1.setAttribute('id', 'myEmail');
+        console.log(createh1);
+        //const myh1 = document.getElementById('myEmail');
+        //console.log(myh1);
+
+        let email = 'sambhandari2022';
+        let userName = `Your username is ${email}`;
+        let userNameNode = document.createTextNode(userName);
+        console.log(userNameNode);
+        //createh1.appendChild(userNameNode);
+
+
         let orderNum = 10123;
         let message = `Your order  number is ${orderNum}`;
         let messageNode = document.createTextNode(message);
         console.log(messageNode);
-        const myDiv = document.getElementById('myDiv');
-        myDiv.appendChild(messageNode);
+        myDiv.appendChild(createh1);
+        myDiv.appendChild(createh2);
+        createh1.appendChild(messageNode);
+        createh2.appendChild(userNameNode);
+
+
+
+        //createh1.appendChild(messageNode);
+
+
     </script>
 </body>
 </html>

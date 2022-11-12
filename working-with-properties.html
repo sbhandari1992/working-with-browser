@@ -17,7 +17,9 @@
         //imageElement.hidden = true;
         console.log(imageElement.alt);
 
-        const buttonElement = document.getElementById('btn');
+        const buttonElement = document.querySelector('button');
+        //const buttonElement = document.querySelector('button');
+
         console.log(buttonElement);
         buttonElement.onclick = () => imageElement.hidden  ?  imageElement.hidden = false : imageElement.hidden = true;
 

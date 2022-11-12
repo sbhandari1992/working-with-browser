@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replace node</title>
+  </head>
+  <body>
+    <div id="imagesDiv">
+      <img src="./working-with-browser/images/onion.png" alt="The store" />
+      <img src="./working-with-browser/images/onion.png" alt="Girl's jacket" />
+      <img src="./working-with-browser/images/onion.png" alt="Boy's jacket" />
+      <img
+        id="saleImg"
+        src="./working-with-browser/images/onion.png"
+        alt="Girl in a jacket"
+      />
+    </div>
+    <script>
+      // create the new element
+      const closeoutImg = document.createElement("img");
+      closeoutImg.setAttribute('id', 'closeout');
+      closeoutImg.src = "./working-with-browser/images/onion.png";
+      closeoutImg.alt = "55% off close-out items";
+      console.log(closeoutImg);
+
+
+      // find the element to be replaced
+      let saleImg = document.getElementById("saleImg");
+
+      // find the parent and then replace the element
+      let imagesDiv = document.getElementById("imagesDiv");
+      imagesDiv.replaceChild(closeoutImg, saleImg);
+      //imagesDiv.replaceChild(closeoutImg,saleImg);
+
+    </script>
+  </body>
+</html>
